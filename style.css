@@ -220,7 +220,7 @@ body { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-are
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; overflow: hidden;
 }
-.exercise-gif { width: 100%; height: 100%; object-fit: cover; }
+.exercise-gif { width: 100%; height: 100%; object-fit: cover; display: block; }
 .exercise-gif-fallback {
     display: flex; align-items: center; justify-content: center;
     width: 100%; height: 100%; font-size: 22px;
@@ -302,7 +302,7 @@ body { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-are
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
 }
-.active-gif { width: 100%; height: 100%; object-fit: contain; }
+.active-gif { width: 100%; height: 100%; object-fit: contain; display: block; }
 .active-gif-fallback {
     display: flex; align-items: center; justify-content: center;
     width: 100%; height: 100%; font-size: 64px;
@@ -344,7 +344,7 @@ body { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-are
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
 }
-.rest-gif { width: 100%; height: 100%; object-fit: contain; }
+.rest-gif { width: 100%; height: 100%; object-fit: contain; display: block; }
 .rest-gif-fallback {
     display: flex; align-items: center; justify-content: center;
     width: 100%; height: 100%; font-size: 44px;

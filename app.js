@@ -263,7 +263,8 @@ function skipExercise() {
 // ---- Helpers ----
 function exerciseImg(ex, cssClass) {
     if (ex.gif) {
-        return `<img src="gifs/${ex.gif}" alt="${ex.name}" class="${cssClass}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="${cssClass}-fallback" style="display:none">${ex.icon}</span>`;
+        const mp4 = 'gifs/' + ex.gif.replace('.gif', '.mp4');
+        return `<video src="${mp4}" class="${cssClass}" autoplay loop muted playsinline onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"></video><span class="${cssClass}-fallback" style="display:none">${ex.icon}</span>`;
     }
     return `<span class="${cssClass}-fallback">${ex.icon}</span>`;
 }

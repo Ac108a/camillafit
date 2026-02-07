@@ -1,4 +1,4 @@
-const CACHE_NAME = 'camillafit-v5';
+const CACHE_NAME = 'camillafit-v6';
 const ASSETS = [
     './',
     './index.html',
@@ -9,26 +9,26 @@ const ASSETS = [
     './icon-512.png',
     './gifs/strength_cover.webp',
     './gifs/yoga_cover.webp',
-    './gifs/goblet_squat.gif',
-    './gifs/romanian_deadlift.gif',
-    './gifs/kettlebell_swing.gif',
-    './gifs/floor_press.gif',
-    './gifs/bent_over_row.gif',
-    './gifs/reverse_lunge.gif',
-    './gifs/clean_and_press.gif',
-    './gifs/dumbbell_thruster.gif',
-    './gifs/sumo_deadlift.gif',
-    './gifs/renegade_row.gif',
-    './gifs/cat_cow_flow.gif',
-    './gifs/downward_dog.gif',
-    './gifs/warrior_i.gif',
-    './gifs/warrior_ii.gif',
-    './gifs/pilates_hundred.gif',
-    './gifs/bridge_pose.gif',
-    './gifs/pilates_swimming.gif',
-    './gifs/pigeon_pose.gif',
-    './gifs/seated_spinal_twist.gif',
-    './gifs/childs_pose.gif'
+    './gifs/goblet_squat.mp4',
+    './gifs/romanian_deadlift.mp4',
+    './gifs/kettlebell_swing.mp4',
+    './gifs/floor_press.mp4',
+    './gifs/bent_over_row.mp4',
+    './gifs/reverse_lunge.mp4',
+    './gifs/clean_and_press.mp4',
+    './gifs/dumbbell_thruster.mp4',
+    './gifs/sumo_deadlift.mp4',
+    './gifs/renegade_row.mp4',
+    './gifs/cat_cow_flow.mp4',
+    './gifs/downward_dog.mp4',
+    './gifs/warrior_i.mp4',
+    './gifs/warrior_ii.mp4',
+    './gifs/pilates_hundred.mp4',
+    './gifs/bridge_pose.mp4',
+    './gifs/pilates_swimming.mp4',
+    './gifs/pigeon_pose.mp4',
+    './gifs/seated_spinal_twist.mp4',
+    './gifs/childs_pose.mp4'
 ];
 
 self.addEventListener('install', e => {
