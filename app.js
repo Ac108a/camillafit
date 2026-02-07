@@ -206,10 +206,11 @@ function tick() {
             Audio.countdownBeep();
             if (state.phase === 'rest' || state.phase === 'intro') Audio.speak(String(state.timeRemaining));
         }
+        updateActiveTimer();
     } else {
         advancePhase();
+        renderActive();
     }
-    renderActive();
 }
 function advancePhase() {
     Audio.transitionBeep(); Audio.vibrate(50);
@@ -302,6 +303,38 @@ function dotClass(i) {
 }
 function themeIcon() {
     return getTheme() === 'dark' ? '\u{263E}' : '\u{2600}';
+}
+
+// ---- Partial DOM Update (avoids destroying <video> elements) ----
+function updateActiveTimer() {
+    const prog = progress();
+    const overall = overallProgress();
+    const color = phaseColor();
+    const r = 54;
+    const circ = 2 * Math.PI * r;
+    const offset = circ * (1 - Math.min(prog, 1));
+
+    const timeEl = document.querySelector('.timer-time');
+    if (timeEl) timeEl.textContent = state.timeRemaining;
+
+    const ringFg = document.querySelector('.timer-ring-fg');
+    if (ringFg) {
+        ringFg.setAttribute('stroke', color);
+        ringFg.setAttribute('stroke-dashoffset', offset);
+    }
+
+    const pctEl = document.querySelector('.workout-percent');
+    if (pctEl) pctEl.textContent = Math.round(overall * 100) + '%';
+
+    const phaseEl = document.querySelector('.phase-label');
+    if (phaseEl) {
+        phaseEl.textContent = phaseLabel();
+        phaseEl.className = 'phase-label ' + phaseCSSClass();
+    }
+
+    const dots = document.querySelectorAll('.progress-dots .dot');
+    const w = state.workout;
+    dots.forEach((dot, i) => { dot.className = dotClass(i); });
 }
 
 // ---- Render ----

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'camillafit-v6';
+const CACHE_NAME = 'camillafit-v7';
 const ASSETS = [
     './',
     './index.html',
